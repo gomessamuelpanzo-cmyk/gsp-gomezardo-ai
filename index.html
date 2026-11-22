@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#030817"><meta name="description" content="GSP Gomezardo — o teu assistente virtual de IA">
+<link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/style.css">
+<title>GSP Gomezardo AI</title>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">GSP</div><div><strong>GOMEZARDO</strong><small>ASSISTENTE VIRTUAL DE IA</small></div></div>
+    <div class="top-actions"><span class="status-dot" id="connectionDot"></span><span id="connectionText">A verificar IA…</span><button class="icon-btn" id="installBtn" hidden aria-label="Instalar aplicação">⇩</button></div>
+  </header>
+  <main class="dashboard">
+    <aside class="sidebar" aria-label="Funcionalidades">
+      <button class="nav-item active" data-action="chat"><span>▤</span> Chat IA</button>
+      <button class="nav-item" data-action="voice"><span>♬</span> Voz</button>
+      <button class="nav-item" data-action="camera"><span>▣</span> Câmara</button>
+      <button class="nav-item" data-action="call"><span>☎</span> Chamadas</button>
+      <button class="nav-item" data-action="messages"><span>✉</span> Mensagens</button>
+      <button class="nav-item" data-action="music"><span>♫</span> Música</button>
+      <button class="nav-item" data-action="internet"><span>◎</span> Internet</button>
+      <button class="nav-item" data-action="notes"><span>▤</span> Notas</button>
+      <button class="nav-item" data-action="timer"><span>◷</span> Temporizador</button>
+      <button class="nav-item" data-action="settings"><span>⚙</span> Definições</button>
+    </aside>
+    <section class="hero-panel">
+      <div class="hero-copy"><span class="eyebrow">O TEU COMPANHEIRO DIGITAL</span><h1>Olá! Eu sou o <em>Gomezardo.</em></h1><p>Como posso ajudar-te hoje?</p></div>
+      <div class="avatar-stage" id="avatarStage"><div class="avatar-glow"></div><div class="avatar-rings"></div><img class="avatar-fallback" src="/avatar-gomezardo.png" alt="Avatar robô azul Gomezardo"><div class="avatar-status" id="avatarStatus">GOMEZARDO · PRONTO</div></div>
+      <div class="feature-strip"><span>✦ Inteligente</span><span>◉ Falante</span><span>♡ Sempre contigo</span></div>
+      <div class="angola-tag">🇦🇴 <span>Angola no coração</span><b>♥</b></div>
+    </section>
+    <section class="workspace">
+      <div class="panel-head"><div><span class="eyebrow">GSP · GOMES SAMUEL PANZO</span><h2 id="panelTitle">Chat IA</h2></div><span class="live-pill"><i></i> ONLINE</span></div>
+      <div class="chat-log" id="chatLog" aria-live="polite">
+        <div class="message assistant"><div class="bubble"><b>Gomezardo</b><p>Olá! Sou o teu assistente virtual. Escreve uma mensagem para começarmos. 🇦🇴</p></div></div>
+      </div>
+      <form class="composer" id="chatForm"><textarea id="messageInput" rows="1" placeholder="Escreve aqui a tua mensagem…" aria-label="A tua mensagem"></textarea><button class="send-btn" type="submit" aria-label="Enviar mensagem">➤</button></form>
+      <div class="quick-actions"><button data-action="voice">🎙 Falar</button><button data-action="internet">🌐 Pesquisar</button><button data-action="notes">📝 Nova nota</button></div>
+      <div class="mini-status" id="miniStatus">As conversas ficam neste dispositivo.</div>
+    </section>
+  </main>
+  <footer class="voice-dock"><button class="dock-label" id="speakPrompt">Fale comigo…</button><div class="sound-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><button class="mic-button" id="micButton" aria-label="Falar com Gomezardo">🎙</button><button class="dock-icon" id="volumeButton" aria-label="Ler última resposta">🔊</button><button class="dock-icon" id="powerButton" aria-label="Parar voz">⏻</button></footer>
+  <div class="toast" id="toast" role="status"></div>
+</div>
+<div class="modal" id="modal" hidden><div class="modal-card"><div class="modal-head"><h3 id="modalTitle">Gomezardo</h3><button id="closeModal" class="icon-btn">✕</button></div><div id="modalBody"></div></div></div>
+<script src="/holo.js"></script><script src="/app.js"></script>
+</body></html>
